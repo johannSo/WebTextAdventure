@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --gh-sakura: #f8e1e7;
+    --gh-matcha: #a8d5ba;
+    --gh-aozora: #a1c9f1;
+    --gh-kusa: #cdebb0;
+    --gh-akari: #f5a97f;
+    --gh-kuro: #0d0d0d;
+    --gh-mokutan: #1f1f1f;
+    --gh-hikari: #8be9fd;
+    --gh-midori: #50fa7b;
+    --gh-shiro: #f8f8f2;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.animate-blink {
+    animation: blink 1s step-end infinite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Code", monospace;
+}
+
+.bg-main {
+    background-color: var(--gh-kuro);
+    color: var(--gh-shiro);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.second {
+    background-color: var(--gh-mokutan);
+    color: var(--gh-shiro);
+}
+
+.accent {
+    color: var(--gh-hikari);
+    font-weight: bold;
+}
+
+.button {
+    background-color: var(--gh-hikari);
+    color: var(--gh-kuro);
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--gh-hikari);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--gh-midori);
+    box-shadow: 0 0 15px var(--gh-midori);
+    transform: scale(1.05);
+}
+
+input,
+textarea {
+    background-color: var(--gh-mokutan);
+    color: var(--gh-shiro);
+    border: 2px solid var(--gh-hikari);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition:
+        border 0.3s,
+        box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--gh-midori);
+    box-shadow: 0 0 8px var(--gh-midori);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Base Styles */
+a {
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it a block for padding and margin */
+    padding: 12px 24px; /* Add some padding to make it button-like */
+    font-size: 16px; /* Set font size */
+    font-weight: bold; /* Make text bold */
+    border-radius: 8px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    text-align: center; /* Center text */
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Base Styles for Links */
+a {
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it block-level to style it like a button */
+    padding: 12px 24px; /* Button-like padding */
+    font-size: 16px; /* Font size to match buttons */
+    font-weight: bold; /* Bold text */
+    border-radius: 8px; /* Rounded corners like a button */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: 2px solid transparent; /* Transparent border by default */
+    color: #fff; /* White text */
+}
+
+.a {
+    background-color: var(--gh-hikari);
+    color: var(--gh-kuro);
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--gh-hikari);
+    cursor: pointer;
+}
+
+.a:hover {
+    background-color: var(--gh-midori);
+    box-shadow: 0 0 15px var(--gh-midori);
+    transform: scale(1.05);
+}
+
+.red {
+    background-color: #e78284;
+    color: var(--gh-kuro);
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #e78284;
+    cursor: pointer;
+}
+
+.red:hover {
+    background-color: var(--gh-midori);
+    box-shadow: 0 0 15px var(--gh-midori);
+    transform: scale(1.05);
+}
